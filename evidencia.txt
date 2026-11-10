@@ -1,0 +1,156 @@
+﻿
+=================================================================
+SEGUNDO AVANCE: PIB Y MERCADO LABORAL DEL TOLIMA
+=================================================================
+
+Archivos cargados correctamente.
+Mercado laboral: 19 filas y 15 columnas
+PIB: 19 filas y 3 columnas
+
+------------------------------------------------------------
+FUENTE 1: MERCADO LABORAL
+------------------------------------------------------------
+Dimensiones: (19, 15)
+Columnas: ['id_a±o', 'mer_departamento', 'pct_pet', 'tgp', 'to', 'td', 'ts', 'poblacion_total', 'pet', 'fuerza_trabajo', 'poblacion_ocupada', 'poblacion_desocupada', 'fuera_fuerza_trabajo', 'poblacion_subocupada', 'fuerza_trabajo_potencial']
+
+Tipos de datos:
+id_a±o                        int64
+mer_departamento                str
+pct_pet                         str
+tgp                             str
+to                              str
+td                              str
+ts                              str
+poblacion_total             float64
+pet                         float64
+fuerza_trabajo                int64
+poblacion_ocupada             int64
+poblacion_desocupada          int64
+fuera_fuerza_trabajo          int64
+poblacion_subocupada        float64
+fuerza_trabajo_potencial    float64
+dtype: object
+
+Valores faltantes por columna:
+id_a±o                       0
+mer_departamento             0
+pct_pet                      0
+tgp                          0
+to                           0
+td                           0
+ts                           1
+poblacion_total              0
+pet                          0
+fuerza_trabajo               0
+poblacion_ocupada            0
+poblacion_desocupada         0
+fuera_fuerza_trabajo         0
+poblacion_subocupada         1
+fuerza_trabajo_potencial    14
+dtype: int64
+
+Filas completamente duplicadas: 0
+
+------------------------------------------------------------
+FUENTE 2: PIB DEPARTAMENTAL
+------------------------------------------------------------
+Dimensiones: (19, 3)
+Columnas: ['a±o_id', 'pib_departamento', 'pib_constante_2015']
+
+Tipos de datos:
+a±o_id                int64
+pib_departamento        str
+pib_constante_2015    int64
+dtype: object
+
+Valores faltantes por columna:
+a±o_id                0
+pib_departamento      0
+pib_constante_2015    0
+dtype: int64
+
+Filas completamente duplicadas: 0
+
+Comparaci≤n de las fuentes:
+                    Archivo  Filas  Columnas  Valores_faltantes
+mercado_laboral_tolima.xlsx     19        15                 16
+     pib_departamental.xlsx     19         3                  0
+
+TRANSFORMACI╙N 1: textos y nombres estandarizados.
+TRANSFORMACI╙N 2: claves de a±o convertidas a n·meros enteros.
+TRANSFORMACI╙N 3: variables numΘricas y tasas convertidas correctamente.
+TRANSFORMACI╙N 4: revisi≤n de duplicados completada.
+Filas exactas repetidas eliminadas en mercado laboral: 0
+Filas exactas repetidas eliminadas en PIB: 0
+Registros involucrados en a±os repetidos del mercado laboral: 0
+Registros involucrados en a±os repetidos del PIB: 0
+TRANSFORMACI╙N 5: valores faltantes identificados y conservados sin imputaci≤n.
+
+A±os en mercado laboral:
+[2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+
+A±os en PIB:
+[2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+
+A±os del mercado laboral que no aparecen en PIB: []
+A±os del PIB que no aparecen en mercado laboral: []
+
+Integraci≤n completada.
+Filas antes de integrar: 19
+Filas despuΘs de integrar: 19
+Registros sin coincidencia de PIB: 0
+Dimensiones de la tabla final: (19, 16)
+
+VALIDACIONES DEL RESULTADO
+                       Validacion Resultado                                                                  Detalle
+            Conservaci≤n de filas    Cumple                                                   Antes: 19; despuΘs: 19
+                 Unicidad del a±o    Cumple                                        A±os duplicados en tabla final: 0
+              Relaci≤n con el PIB    Cumple                                         Registros sin PIB relacionado: 0
+                Valores positivos    Cumple                    Registros con PIB o poblaci≤n menor o igual a cero: 0
+                   Rango de tasas    Cumple                           Registros con tasas fuera del rango 0 a 100: 0
+    Consistencia del departamento    Cumple                                    Departamentos encontrados: ['Tolima']
+Consistencia de fuerza de trabajo   Revisar Registros donde fuerza_trabajo no coincide con ocupados + desocupados: 7
+   Conservaci≤n del total del PIB    Cumple                                           Antes: 330295; despuΘs: 330295
+
+PORCENTAJE DE VALORES FALTANTES
+                 Columna  Valores_faltantes  Porcentaje_faltantes
+                  id_a±o                  0                  0.00
+            departamento                  0                  0.00
+                 pct_pet                  0                  0.00
+                     tgp                  0                  0.00
+                      to                  0                  0.00
+                      td                  0                  0.00
+                      ts                  1                  5.26
+         poblacion_total                  0                  0.00
+                     pet                  0                  0.00
+          fuerza_trabajo                  0                  0.00
+       poblacion_ocupada                  0                  0.00
+    poblacion_desocupada                  0                  0.00
+    fuera_fuerza_trabajo                  0                  0.00
+    poblacion_subocupada                  1                  5.26
+fuerza_trabajo_potencial                 14                 73.68
+      pib_constante_2015                  0                  0.00
+
+MATRIZ DE CALIDAD
+                                               Campo                                                Regla                                                                                   Hallazgo    Dimension  Estado                                                        Accion
+                                              id_a±o                                El a±o debe ser ·nico                                                                          0 a±os duplicados     Unicidad  Cumple         Mantener el a±o como clave para integrar las fuentes.
+ts / poblacion_subocupada / fuerza_trabajo_potencial          Identificar y revisar los valores faltantes ts: 1 faltantes; poblacion_subocupada: 1 faltantes; fuerza_trabajo_potencial: 14 faltantes  Completitud Revisar Conservar los nulos sin imputar para no inventar informaci≤n.
+                pib_constante_2015 / poblacion_total               Los valores deben ser mayores que cero                                                       0 registros con valores no positivos      Validez  Cumple              Revisar cualquier valor igual o inferior a cero.
+                            pct_pet, tgp, to, td, ts                  Las tasas deben estar entre 0 y 100                                                      0 registros con tasas fuera del rango      Validez  Cumple Comprobar los valores porcentuales fuera del rango permitido.
+                                        departamento El departamento debe estar estandarizado como Tolima                                                            Valores encontrados: ['Tolima'] Consistencia  Cumple        Estandarizar la escritura del nombre del departamento.
+                                      fuerza_trabajo            Debe coincidir con ocupados + desocupados                                                                7 registros con diferencias Consistencia Revisar      Revisar las sumas de poblaci≤n laboral que no coincidan.
+
+AN┴LISIS DE VARIABLES CON VALORES FALTANTES
+                Variable     Media  Mediana  Faltantes  Porcentaje_faltantes           Tratamiento
+                      ts 11.122222    11.55          1                  5.26 Conservar sin imputar
+    poblacion_subocupada 74.333333    76.00          1                  5.26 Conservar sin imputar
+fuerza_trabajo_potencial 42.800000    37.00         14                 73.68 Conservar sin imputar
+
+=================================================================
+PROCESO TERMINADO
+=================================================================
+Tabla integrada: C:\Users\Santiago\OneDrive\Desktop\Proyecto\segundo_avance_tolima\resultados\segundo_avance_tolima.xlsx
+Archivo CSV: C:\Users\Santiago\OneDrive\Desktop\Proyecto\segundo_avance_tolima\resultados\tabla_final_tolima.csv
+Filas finales: 19
+Columnas finales: 16
+Los valores faltantes se conservaron sin reemplazarlos.
