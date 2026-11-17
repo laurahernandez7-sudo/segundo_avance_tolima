@@ -1,0 +1,7 @@
+﻿Variable,Q1,Q3,IQR,Limite_inferior,Limite_superior,Anio_atipico,Valor_detectado,Decision
+pib_constante_2015,15571.0,18622.5,3051.5,10993.75,23199.75,Ninguno,,Serie dentro de rangos normales
+poblacion_ocupada,537.0,605.0,68.0,435.0,707.0,Ninguno,,Serie dentro de rangos normales
+poblacion_desocupada,73.0,99.0,26.0,34.0,138.0,2020,139.0,"Conservar (choque real COVID-19, sin error de captura)"
+td,11.15,15.4,4.25,4.77,21.77,2020,23.2,"Conservar (choque real COVID-19, sin error de captura)"
+crec_pib_real,1.06,3.37,2.31,-2.4,6.83,2020,-7.36,"Conservar (choque real COVID-19, sin error de captura)"
+crec_pib_real,1.06,3.37,2.31,-2.4,6.83,2021,9.24,"Conservar (choque real COVID-19, sin error de captura)"

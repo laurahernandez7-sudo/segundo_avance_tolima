@@ -1,0 +1,11 @@
+﻿Validacion,Resultado,Detalle
+Conservación de filas (cobertura 2007-2025),Cumple,Antes: 19; después: 19
+Unicidad de la llave temporal (id_año),Cumple,Años duplicados: 0
+Integridad de cruce con PIB,Cumple,Registros sin PIB asociado: 0
+Preservación de masa económica y valores PIB,Cumple,"Suma PIB antes: 330,295; después: 330,295"
+Magnitudes positivas y escalas normalizadas,Cumple,No positivos: 0; escalas en miles verificadas: True
+"Rango lógico de tasas porcentuales [0, 100]",Cumple,Valores fuera de rango: 0
+Consistencia entidad territorial,Cumple,Departamentos detectados: ['Tolima']
+Identidad Fuerza de Trabajo (±1 mil redondeo DANE),Cumple,Exactos: 12; dif ±1 mil: 7; fuera tolerancia: 0
+Identidad PET (±1 mil redondeo DANE),Cumple,Registros fuera de tolerancia ±1 mil: 0
+Consistencia de los 6 indicadores derivados,Cumple,6/6 indicadores verificados (3 nulos esperados en 2007 por rezago t-1)
