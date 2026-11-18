@@ -7,11 +7,17 @@ Pipeline ETL modular en Python para extraer, limpiar, transformar, integrar y au
 1. **Ubicar la carpeta raíz del proyecto** (asegurándose de estar en el directorio donde se encuentran `main.py` y `requirements.txt`):
    ```powershell
    cd ruta\a\segundo_avance_tolima-main
+   
 2. **Crear entorno virtual**
+   ```powershell
    py -m venv .venv
+   
 3. **Instalar dependencias del proyecto**
+   ```powershell
    .venv\Scripts\python.exe -m pip install -r requirements.txt
+   
 4.**Ejecutar el script principal**
+   ```powershell
    .venv\Scripts\python.exe main.py
    
 ## Estructura del repositorio
