@@ -11,10 +11,6 @@ from src.integration import integrar_fuentes
 from src.validation import ejecutar_validaciones
 from src.audit import auditar_faltantes, detectar_atipicos_iqr, construir_matriz_calidad
 
-# ==============================================================================
-# PIPELINE ETL - SEGUNDO AVANCE PROYECTO INTEGRADOR
-# PIB Y MERCADO LABORAL DEL TOLIMA (2007 - 2025)
-# ==============================================================================
 
 RAIZ = Path(__file__).resolve().parent
 RUTA_PIB = RAIZ / "data" / "raw" / "pib_departamental.xlsx"
