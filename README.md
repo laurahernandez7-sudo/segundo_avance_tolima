@@ -21,9 +21,7 @@ Pipeline ETL modular en Python para extraer, limpiar, transformar, integrar y au
    .venv\Scripts\python.exe main.py
 
 
-
- **## Estructura del repositorio ##**
-
+    ## Estructura del repositorio
 ```text
 ├── data/
 │   ├── raw/                  # Fuentes originales del DANE (.xlsx)
