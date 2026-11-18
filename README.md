@@ -2,6 +2,18 @@
 
 Pipeline ETL modular en Python para extraer, limpiar, transformar, integrar y auditar las series oficiales del DANE sobre el Producto Interno Bruto (PIB) departamental a precios constantes de 2015 y los indicadores del mercado laboral (GEIH) del departamento del Tolima.
 
+## Instalación y Ejecución (Windows)
+
+1. **Ubicar la carpeta raíz del proyecto** (asegurándose de estar en el directorio donde se encuentran `main.py` y `requirements.txt`):
+   ```powershell
+   cd ruta\a\segundo_avance_tolima-main
+2. **Crear entorno virtual**
+   py -m venv .venv
+3. **Instalar dependencias del proyecto**
+   .venv\Scripts\python.exe -m pip install -r requirements.txt
+4.**Ejecutar el script principal**
+   .venv\Scripts\python.exe main.py
+   
 ## Estructura del repositorio
 
 ```text
