@@ -19,8 +19,11 @@ Pipeline ETL modular en Python para extraer, limpiar, transformar, integrar y au
 4.**Ejecutar el script principal**
    ```powershell
    .venv\Scripts\python.exe main.py
-   
---------------
+   --------------
+
+
+
+
 ## Estructura del repositorio
 
 ```text
